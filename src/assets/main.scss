@@ -9,24 +9,6 @@ $font_path: '~@/assets/fonts/';
   font-style: normal;
   font-weight: 400;
 }
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Bold'), local('Manrope-Bold'),
-    url($font_path+'Manrope-Bold.woff2') format('woff2'),
-    url($font_path+'Manrope-Bold.otf') format('otf'),
-    url($font_path+'Manrope-Bold.ttf') format('ttf');
-  font-style: normal;
-  font-weight: 700;
-}
-@font-face {
-  font-family: 'Manrope';
-  src: local('Manrope Light'), local('Manrope-Light'),
-    url($font_path+'Manrope-Light.woff2') format('woff2'),
-    url($font_path+'Manrope-Light.otf') format('otf'),
-    url($font_path+'Manrope-Light.ttf') format('ttf');
-  font-style: normal;
-  font-weight: 300;
-}
 
 * {
   color: black;

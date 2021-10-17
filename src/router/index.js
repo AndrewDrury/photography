@@ -4,12 +4,12 @@ import Photo from "../views/Photo.vue";
 
 const routes = [
   {
-    path: "/photography/",
+    path: "/",
     name: "Home",
     component: Home,
   },
   {
-    path: "/photography/:id",
+    path: "/:id",
     name: "photo",
     component: Photo,
   },

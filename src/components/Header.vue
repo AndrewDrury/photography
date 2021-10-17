@@ -1,18 +1,18 @@
 <template>
-    <div class="header row hidden" align="left">
-        <div class="col">
-            <a href="https://www.instagram.com/andrew_drury" target="_blank">
-                <i class="fa fa-instagram"></i>
-                @andrew_drury
-            </a>
-        </div>
-        <div class="col">
-            <a href="mailto:hello@andrew-drury.com">
-                <i class="fa fa-envelope"></i>
-                hello@andrew-drury.com
-            </a>
-        </div>
+  <div class="header row hidden" align="left">
+    <div class="col">
+      <a href="https://www.instagram.com/andrew_drury" target="_blank">
+        <i class="fa fa-instagram"></i>
+        @andrew_drury
+      </a>
     </div>
+    <div class="col">
+      <a href="mailto:hello@andrew-drury.com">
+        <i class="fa fa-envelope"></i>
+        hello@andrew-drury.com
+      </a>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -25,22 +25,21 @@ export default {
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css");
 
 .col {
-    margin-block: 5px;
+  margin-block: 5px;
 }
 
 .header {
-    padding: 0 5rem;
-    margin-top: 38px;
+  padding: 0 5rem;
+  margin-top: 38px;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
-
 
 @media (max-width: 1200px) {
   .header {
