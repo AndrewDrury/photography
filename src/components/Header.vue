@@ -1,24 +1,29 @@
 <template>
-  <div class="header row hidden" align="left">
-    <div class="col">
+  <div class="header row" align="left">
+    <div class="col hidden">
       <a href="https://www.instagram.com/andrew_drury" target="_blank">
         <i class="fa fa-instagram"></i>
         @andrew_drury
       </a>
     </div>
-    <div class="col">
+    <div class="col hidden">
       <a href="mailto:hello@andrew-drury.com">
         <i class="fa fa-envelope"></i>
         hello@andrew-drury.com
       </a>
     </div>
-    <div class="col">
+    <div class="col hidden">
       <a
         href="https://en.nikon.ca/nikon-products/product/dslr-cameras/d5600.html"
         target="_blank"
       >
-        <i class="fa fa-camera-retro"></i>
-        Nikon D5600 DSLR with 18-55mm VR Lens Kit
+        <div class="desktop">
+          <i class="fa fa-camera-retro"></i>Nikon D5600 DSLR with 18-55mm VR
+          Lens Kit
+        </div>
+        <div class="mobile">
+          <div><i class="fa fa-camera-retro"></i>Nikon D5600 DSLR</div>
+        </div>
       </a>
     </div>
   </div>
@@ -48,6 +53,18 @@ a {
 
 a:hover {
   text-decoration: underline;
+
+  div {
+    text-decoration: underline;
+  }
+}
+
+.fa-camera-retro {
+  margin-right: 4px;
+}
+
+.lens {
+  margin-left: 25px;
 }
 
 @media (max-width: 1200px) {

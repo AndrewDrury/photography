@@ -5,13 +5,13 @@
       v-for="photo in photos.keys()"
       :key="photo.slice(2, -4)"
     >
-      <div class="desktop hidden">
+      <div class="desktop">
         <router-link :to="`/${photo.slice(2, -4)}`">
-          <img :src="getImgUrl(photo)" />
+          <img class="hidden" :src="getImgUrl(photo)" />
         </router-link>
       </div>
-      <div class="mobile hidden">
-        <img :src="getImgUrl(photo)" />
+      <div class="mobile">
+        <img class="hidden" :src="getImgUrl(photo)" />
       </div>
     </div>
   </div>
