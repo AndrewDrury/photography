@@ -11,8 +11,6 @@ const photos = require.context(
   /^.*\.jpg$/
 );
 
-console.log(photos.keys());
-
 export default {
   name: "Photo",
   data() {

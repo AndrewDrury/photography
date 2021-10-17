@@ -12,6 +12,15 @@
         hello@andrew-drury.com
       </a>
     </div>
+    <div class="col">
+      <a
+        href="https://en.nikon.ca/nikon-products/product/dslr-cameras/d5600.html"
+        target="_blank"
+      >
+        <i class="fa fa-camera-retro"></i>
+        Nikon D5600 DSLR with 18-55mm VR Lens Kit
+      </a>
+    </div>
   </div>
 </template>
 
