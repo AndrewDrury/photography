@@ -1,0 +1,126 @@
+$font_path: '~@/assets/fonts/';
+
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope'), local('Manrope-Regular'),
+    url($font_path+'Manrope-Regular.woff2') format('woff2'),
+    url($font_path+'Manrope-Regular.otf') format('otf'),
+    url($font_path+'Manrope-Regular.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Bold'), local('Manrope-Bold'),
+    url($font_path+'Manrope-Bold.woff2') format('woff2'),
+    url($font_path+'Manrope-Bold.otf') format('otf'),
+    url($font_path+'Manrope-Bold.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'Manrope';
+  src: local('Manrope Light'), local('Manrope-Light'),
+    url($font_path+'Manrope-Light.woff2') format('woff2'),
+    url($font_path+'Manrope-Light.otf') format('otf'),
+    url($font_path+'Manrope-Light.ttf') format('ttf');
+  font-style: normal;
+  font-weight: 300;
+}
+
+* {
+  color: black;
+  font-family: 'Manrope', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 26px;
+  //Font weight specifications > font-weight: 100;
+  // Thin            100
+  // Extra Light     200
+  // Light           300
+  // Regular         400
+  // Medium          500
+  // Semi-Bold       600
+  // Bold            700
+  // Black           900
+}
+
+//Animate elements when scrolled into view
+.fade-in-element {
+  opacity: 0;
+  -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+  -moz-animation: reveal 1s ease-in 1 normal forwards;
+  -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+  animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
+}
+.hidden {
+  opacity: 0;
+}
+
+@-webkit-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-moz-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@-o-keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}
+
+@keyframes reveal {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+       -moz-transform: translateY(100%);
+         -o-transform: translateY(100%);
+            transform: translateY(100%);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+       -moz-transform: translateY(0);
+         -o-transform: translateY(0);
+            transform: translateY(0);
+  }
+}

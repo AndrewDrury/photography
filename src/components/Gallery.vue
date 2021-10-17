@@ -85,7 +85,6 @@ export default {
 .desktop {
   display: inline-block;
   overflow: hidden;
-  margin-bottom: 0.5rem;
 }
 
 .mobile {
@@ -116,86 +115,6 @@ export default {
   transform: scale(1.1);
 }
 
-.fade-in-element {
-  opacity: 0;
-  -webkit-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-  -moz-animation: reveal 1s ease-in 1 normal forwards;
-  -o-animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-  animation: reveal 1s cubic-bezier(0, 1, 0.5, 1) 1 normal forwards;
-}
-
-.hidden {
-  opacity: 0;
-}
-
-@-webkit-keyframes reveal {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@-moz-keyframes reveal {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@-o-keyframes reveal {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
-@keyframes reveal {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(100%);
-    -moz-transform: translateY(100%);
-    -o-transform: translateY(100%);
-    transform: translateY(100%);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-    -moz-transform: translateY(0);
-    -o-transform: translateY(0);
-    transform: translateY(0);
-  }
-}
-
 @media (max-width: 1200px) {
   .gallery {
     -moz-column-count: 2;
@@ -215,6 +134,10 @@ export default {
 
   .gallery-panel img {
     margin-bottom: 1rem;
+  }
+
+  .gallery-panel:hover img {
+    transform: scale(1);
   }
 
   .desktop {
