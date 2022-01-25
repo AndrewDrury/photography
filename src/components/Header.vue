@@ -1,35 +1,29 @@
 <template>
   <div class="header row" align="left">
-    <div class="col hidden">
+    <div class="col">
       <a href="https://www.instagram.com/andrew_drury" target="_blank">
         <i class="fa fa-instagram"></i>
         @andrew_drury
       </a>
     </div>
-    <div class="col hidden">
+    <div class="col">
       <a href="mailto:hello@andrew-drury.com">
         <i class="fa fa-envelope"></i>
         hello@andrew-drury.com
       </a>
     </div>
-    <div class="col hidden">
+    <div class="col">
       <a href="https://www.andrew-drury.com/" target="_blank">
         <i class="fa fa-coffee" style="margin-right: -1px"></i>
         andrew-drury.com
       </a>
     </div>
-    <div class="col hidden">
+    <div class="col">
       <a
         href="https://en.nikon.ca/nikon-products/product/dslr-cameras/d5600.html"
         target="_blank"
       >
-        <div class="desktop">
-          <i class="fa fa-camera-retro"></i>Nikon D5600 DSLR with 18-55mm VR
-          Lens Kit
-        </div>
-        <div class="mobile">
-          <div><i class="fa fa-camera-retro"></i>Nikon D5600 DSLR</div>
-        </div>
+        <div><i class="fa fa-camera-retro"></i>Nikon D5600 DSLR</div>
       </a>
     </div>
   </div>
