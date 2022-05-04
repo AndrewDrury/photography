@@ -6,7 +6,7 @@
 
 <script>
 const photos = require.context(
-  "../assets/images/thumbnails",
+  "../assets/images",
   true,
   /^.*\.jpg$/
 );
