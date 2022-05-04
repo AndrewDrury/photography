@@ -7,11 +7,11 @@
     >
       <div class="desktop">
         <router-link :to="`/${photo.slice(2, -4)}`">
-          <img :src="getImgUrl(photo)" />
+          <img class="hidden" :src="getImgUrl(photo)" v-on:load="onLoaded" v-show="loaded" />
         </router-link>
       </div>
       <div class="mobile">
-        <img :src="getImgUrl(photo)" />
+        <img class="hidden" :src="getImgUrl(photo)" v-on:load="onLoaded" v-show="loaded" />
       </div>
     </div>
   </div>
@@ -32,11 +32,54 @@ export default {
   data() {
     return {
       photos,
+      photosLoaded: 0,
+      loaded: false,
     };
   },
   methods: {
+    onLoaded() {
+      this.photosLoaded += 1
+      console.log(this.photosLoaded)
+      if (this.photosLoaded == this.photos.keys().length * 2) {
+        this.loaded = true;
+        console.log('DONE')
+      }
+    },
     getImgUrl(filename) {
       return require("../assets/images/thumbnails" + filename.substring(1));
+    },
+    animateElements: function () {
+      var elements;
+      var windowHeight;
+      function init() {
+        elements = document.querySelectorAll(".hidden");
+        windowHeight = window.innerHeight;
+        addEventHandlers();
+        checkPosition();
+      }
+      function addEventHandlers() {
+        window.addEventListener("scroll", checkPosition);
+        window.addEventListener("resize", init);
+      }
+      function checkPosition() {
+        for (var i = 0; i < elements.length; i++) {
+          var element = elements[i];
+          var positionFromTop = elements[i].getBoundingClientRect().top;
+          if (positionFromTop - windowHeight <= 0) {
+            element.classList.add("fade-in-element");
+            element.classList.remove("hidden");
+          }
+          if (positionFromTop - windowHeight > 1) {
+            //UNCOMMENT to reanimate
+            // element.classList.add('hidden');
+            // element.classList.remove('fade-in-element');
+          }
+        }
+      }
+      window.addEventListener("scroll", checkPosition);
+      window.addEventListener("resize", init);
+      init();
+      checkPosition();
     },
   },
 };
