@@ -26,6 +26,9 @@
         <div><i class="fa fa-camera-retro"></i>Nikon D5600 DSLR</div>
       </a>
     </div>
+    <div class="col hidden fun">
+      <div>Just for fun.</div>
+    </div>
   </div>
 </template>
 
@@ -65,6 +68,10 @@ a:hover {
 
 .lens {
   margin-left: 25px;
+}
+
+.fun {
+  margin-top: 60px;
 }
 
 @media (max-width: 1200px) {

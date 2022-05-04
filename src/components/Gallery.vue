@@ -6,23 +6,29 @@
       :key="photo.slice(2, -4)"
     >
       <div class="desktop">
-        <router-link :to="`/${photo.slice(2, -4)}`">
-          <img class="hidden" :src="getImgUrl(photo)" v-on:load="onLoaded" v-show="loaded" />
-        </router-link>
+        <!-- <router-link :to="`/${photo.slice(2, -4)}`"> -->
+        <img
+          class="hidden"
+          :src="getImgUrl(photo)"
+          v-on:load="onLoaded"
+          v-show="loaded"
+        />
+        <!-- </router-link> -->
       </div>
       <div class="mobile">
-        <img class="hidden" :src="getImgUrl(photo)" v-on:load="onLoaded" v-show="loaded" />
+        <img
+          class="hidden"
+          :src="getImgUrl(photo)"
+          v-on:load="onLoaded"
+          v-show="loaded"
+        />
       </div>
     </div>
   </div>
 </template>
 
 <script>
-const photos = require.context(
-  "../assets/images/thumbnails",
-  true,
-  /^.*\.jpg$/
-);
+const photos = require.context("../assets/images", true, /^.*\.jpg$/);
 
 export default {
   name: "Gallery",
@@ -38,15 +44,15 @@ export default {
   },
   methods: {
     onLoaded() {
-      this.photosLoaded += 1
-      console.log(this.photosLoaded)
+      this.photosLoaded += 1;
+      console.log(this.photosLoaded);
       if (this.photosLoaded == this.photos.keys().length * 2) {
         this.loaded = true;
-        console.log('DONE')
+        console.log("DONE");
       }
     },
     getImgUrl(filename) {
-      return require("../assets/images/thumbnails" + filename.substring(1));
+      return require("../assets/images" + filename.substring(1));
     },
     animateElements: function () {
       var elements;
@@ -105,10 +111,10 @@ export default {
   column-count: 3;
   column-gap: 0.5rem;
   padding: 0 5rem;
-  margin: 5rem auto;
+  margin: 115px auto 5rem auto;
 }
 
-.gallery-panel img {
+.gallery-panel div img {
   width: 100% !important;
   height: auto !important;
   /* margin-bottom: 0.5rem; */
