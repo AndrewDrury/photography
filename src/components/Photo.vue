@@ -5,11 +5,7 @@
 </template>
 
 <script>
-const photos = require.context(
-  "../assets/images",
-  true,
-  /^.*\.jpg$/
-);
+const photos = require.context("../assets/images", true, /^.*\.jpg$/);
 
 export default {
   name: "Photo",

@@ -71,7 +71,7 @@ a:hover {
 }
 
 .fun {
-  margin-top: 60px;
+  margin-top: 115px;
 }
 
 @media (max-width: 1200px) {
