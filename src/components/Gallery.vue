@@ -31,7 +31,7 @@
     <div class="gallery">
       <div
         class="gallery-panel"
-        v-for="photo in photos.keys()"
+        v-for="photo in photos.keys().reverse()"
         :key="photo.slice(2, -4)"
       >
         <div class="desktop">

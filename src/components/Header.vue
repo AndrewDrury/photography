@@ -26,15 +26,14 @@
         <div><i class="fa fa-camera-retro"></i>Nikon D5600 DSLR</div>
       </a>
     </div>
-    <div class="col hidden">
-      <!-- <i class="fab fa-ethereum" style="margin-right: -1px"></i> -->
+    <!-- <div class="col hidden">
       <img
         src="../assets/eth.png"
         alt="eth"
         style="width: 14px; margin-left: 3px; margin-right: 2.5px"
       />
       andrew0.eth
-    </div>
+    </div> -->
     <div class="col hidden fun">
       <div>Just for fun :)</div>
     </div>
