@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="loading" v-show="loading">
+    <div class="loading" v-show="showLoading">
       <svg width="100" height="100" viewBox="0 0 100 100">
         <polyline
           class="line-cornered stroke-still"
@@ -36,21 +36,23 @@
       >
         <div class="desktop">
           <!-- <router-link :to="`/${photo.slice(2, -4)}`"> -->
-          <img
+          <!-- <img
             class="hidden"
             :src="getImgUrl(photo)"
             v-on:load="onLoaded"
             v-show="loaded"
-          />
+          /> -->
+          <v-lazy-image :src='getImgUrl(photo)' v-on:load="onLoaded" />
           <!-- </router-link> -->
         </div>
         <div class="mobile">
-          <img
+          <v-lazy-image :src='getImgUrl(photo)' v-on:load="onLoaded" />
+          <!-- <img
             class="hidden"
             :src="getImgUrl(photo)"
             v-on:load="onLoaded"
             v-show="loaded"
-          />
+          /> -->
         </div>
       </div>
     </div>
@@ -59,9 +61,13 @@
 
 <script>
 const photos = require.context("../assets/images", true, /^.*\.jpg$/);
+import VLazyImage from "v-lazy-image";
 
 export default {
   name: "Gallery",
+  components: {
+    VLazyImage,
+  },
   mounted() {
     this.animateElements();
   },
@@ -71,10 +77,12 @@ export default {
       photosLoaded: 0,
       loaded: false,
       loading: true,
+      showLoading: false,
     };
   },
   methods: {
     onLoaded() {
+      if (this.showLoading) this.showLoading = false;
       this.photosLoaded += 1;
       console.log(this.photosLoaded);
       if (this.photosLoaded == this.photos.keys().length * 2) {
@@ -153,7 +161,7 @@ export default {
 }
 
 .gallery-panel:hover img {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 .loading {
