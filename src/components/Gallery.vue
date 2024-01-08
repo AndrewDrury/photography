@@ -42,11 +42,11 @@
             v-on:load="onLoaded"
             v-show="loaded"
           /> -->
-          <v-lazy-image :src='getImgUrl(photo)' v-on:load="onLoaded" />
+          <v-lazy-image :src="getImgUrl(photo)" v-on:load="onLoaded" />
           <!-- </router-link> -->
         </div>
         <div class="mobile">
-          <v-lazy-image :src='getImgUrl(photo)' v-on:load="onLoaded" />
+          <v-lazy-image :src="getImgUrl(photo)" v-on:load="onLoaded" />
           <!-- <img
             class="hidden"
             :src="getImgUrl(photo)"
